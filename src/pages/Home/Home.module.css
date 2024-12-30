@@ -33,6 +33,9 @@
     gap: 10px;
     margin-bottom: 20px;
     flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .emailInput {
@@ -60,6 +63,8 @@
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 150px;
 }
 
 .subscribeButton:hover {
@@ -71,4 +76,81 @@
     font-size: 1rem;
     color: var(--color-secondary);
     margin-top: 10px;
+}
+
+/* Yeni Bölüm: Features */
+.featuresSection {
+    margin-top: 60px;
+}
+
+.featuresTitle {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.featuresSubtitle {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 40px;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.featureCard {
+    background-color: var(--color-surface);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.featureIcon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.featureTitle {
+    font-size: 1.3rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.featureDescription {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .featuresGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .featuresTitle {
+        font-size: 1.8rem;
+    }
+
+    .featuresSubtitle {
+        font-size: 1rem;
+    }
 }

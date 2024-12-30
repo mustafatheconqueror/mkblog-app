@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import React, { useState } from 'react';
 import styles from './Home.module.css';
+import { FaLightbulb, FaSyncAlt, FaCode, FaCogs } from 'react-icons/fa';
 
 const Home = () => {
     const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const Home = () => {
         <div className={styles.container}>
             <h1 className={styles.mainTitle}>Improve Your Engineering and Architecture Skills</h1>
             <p className={styles.subTitle}>
-                Hello, I am Karacabey and welcome to the practical .NET newsletter.
+                Hello, I am Anton and welcome to the practical .NET newsletter.
             </p>
             <p className={styles.description}>
                 Each week you will get 1 practical tip with best practices and architecture advice.
@@ -42,6 +43,42 @@ const Home = () => {
                 </button>
             </form>
             {message && <p className={styles.message}>{message}</p>}
+
+            {/* Yeni Bölüm: Features */}
+            <section className={styles.featuresSection}>
+                <h2 className={styles.featuresTitle}>Grow faster as a developer</h2>
+                <p className={styles.featuresSubtitle}>Everything you need to become a better developer</p>
+                <div className={styles.featuresGrid}>
+                    <div className={styles.featureCard}>
+                        <FaLightbulb className={styles.featureIcon} />
+                        <h3 className={styles.featureTitle}>Practical Tips and Source Code</h3>
+                        <p className={styles.featureDescription}>
+                            From each blog you can get practical tips and source you can use in your projects.
+                        </p>
+                    </div>
+                    <div className={styles.featureCard}>
+                        <FaSyncAlt className={styles.featureIcon} />
+                        <h3 className={styles.featureTitle}>Stay Up-To-Date</h3>
+                        <p className={styles.featureDescription}>
+                            My blogs will keep you ahead with the latest techniques and best practices in the ever-evolving tech landscape.
+                        </p>
+                    </div>
+                    <div className={styles.featureCard}>
+                        <FaCode className={styles.featureIcon} />
+                        <h3 className={styles.featureTitle}>Real World Experience</h3>
+                        <p className={styles.featureDescription}>
+                            Explore practical coding examples and real-world applications. Enhance your understanding and build robust solutions.
+                        </p>
+                    </div>
+                    <div className={styles.featureCard}>
+                        <FaCogs className={styles.featureIcon} />
+                        <h3 className={styles.featureTitle}>Advanced .NET Architecture</h3>
+                        <p className={styles.featureDescription}>
+                            Dive deeper into domain-driven design, modular monoliths, microservices, and advanced architecture patterns in .NET to build robust, scalable applications.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
