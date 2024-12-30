@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import classNames from 'classnames';
-import logo from '../../assets/react.svg'; // Ensure the path is correct
+import logo from '../../assets/logo.png'; // Ensure the path is correct
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,11 +21,23 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <NavLink to="/" onClick={closeMobileMenu}>
+            {/* Left Section: Logo and "Blogs" Link */}
+            <div className={styles.leftSection}>
+                <NavLink to="/" onClick={closeMobileMenu} className={styles.logoLink}>
                     <img src={logo} alt="MkBlog Logo" className={styles.logoImage} />
                 </NavLink>
+                <NavLink
+                    to="/blogs"
+                    className={({ isActive }) =>
+                        isActive ? classNames(styles.navLink, styles.activeLink) : styles.navLink
+                    }
+                    onClick={closeMobileMenu}
+                >
+                    Blogs
+                </NavLink>
             </div>
+
+            {/* Middle Section: Other Navigation Links */}
             <nav
                 className={classNames(styles.nav, {
                     [styles.active]: isMobileMenuOpen,
@@ -34,20 +46,9 @@ const Header = () => {
                 <ul className={styles.navList}>
                     <li>
                         <NavLink
-                            to="/blogs"
-                            className={({ isActive }) =>
-                                isActive ? styles.activeLink : undefined
-                            }
-                            onClick={closeMobileMenu}
-                        >
-                            Blogs
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
                             to="/sponsorship"
                             className={({ isActive }) =>
-                                isActive ? styles.activeLink : undefined
+                                isActive ? classNames(styles.navLink, styles.activeLink) : styles.navLink
                             }
                             onClick={closeMobileMenu}
                         >
@@ -58,7 +59,7 @@ const Header = () => {
                         <NavLink
                             to="/about"
                             className={({ isActive }) =>
-                                isActive ? styles.activeLink : undefined
+                                isActive ? classNames(styles.navLink, styles.activeLink) : styles.navLink
                             }
                             onClick={closeMobileMenu}
                         >
@@ -67,6 +68,8 @@ const Header = () => {
                     </li>
                 </ul>
             </nav>
+
+            {/* Right Section: Theme Toggle and Hamburger Menu */}
             <div className={styles.actions}>
                 <button
                     onClick={toggleTheme}
