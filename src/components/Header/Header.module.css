@@ -12,11 +12,11 @@
     z-index: 1000;
 }
 
-/* Left Section: Logo and "Blogs" */
+/* Sol Bölüm: Logo ve "Blogs" */
 .leftSection {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between logo and "Blogs" */
+    gap: 25px; /* Logo ile "Blogs" arasındaki boşluk */
 }
 
 .logoLink {
@@ -25,11 +25,11 @@
 }
 
 .logoImage {
-    height: 50px; /* Increased logo size for better visibility */
+    height: 50px; /* Logo boyutu artırıldı */
     width: auto;
 }
 
-/* Navigation Links */
+/* Navigasyon Linkleri */
 .nav {
     display: flex;
 }
@@ -37,7 +37,7 @@
 .navList {
     list-style: none;
     display: flex;
-    gap: 25px; /* Increased gap between navigation links */
+    gap: 25px; /* Navigasyon linkleri arasındaki boşluk */
     margin: 0;
     padding: 0;
 }
@@ -45,7 +45,7 @@
 .navLink {
     color: var(--color-primary);
     text-decoration: none;
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.5rem; /* Yazı tipi boyutu artırıldı */
     transition: color 0.3s ease;
     position: relative;
     font-weight: 500;
@@ -70,6 +70,7 @@
     left: 0;
 }
 
+/* Sağ Bölüm: Tema Toggle ve Hamburger Menü */
 .actions {
     display: flex;
     align-items: center;
@@ -81,14 +82,14 @@
     border: none;
     cursor: pointer;
     color: var(--color-primary);
-    font-size: 1.5rem; /* Increased icon size */
+    font-size: 1.5rem; /* İkon boyutu artırıldı */
     display: flex;
     align-items: center;
 }
 
 .hamburger {
-    display: none; /* Hidden on desktop */
-    font-size: 1.8rem; /* Increased icon size */
+    display: none; /* Masaüstünde gizli */
+    font-size: 1.8rem; /* İkon boyutu artırıldı */
     cursor: pointer;
     color: var(--color-primary);
 }
@@ -110,21 +111,29 @@
     }
 
     .nav.active {
-        max-height: 300px; /* Adjust based on content */
+        max-height: 300px; /* İçeriğe bağlı olarak ayarlanabilir */
     }
 
     .navList {
         flex-direction: column;
-        gap: 20px; /* Increased gap for easier tapping */
+        gap: 20px; /* Mobilde navigasyon linkleri arasındaki boşluk */
         padding: 20px 0;
     }
 
     .hamburger {
-        display: block; /* Visible on mobile */
+        display: block; /* Mobilde görünür */
     }
 
-    /* Adjust Left Section for Mobile */
-    .leftSection {
-        gap: 15px; /* Reduced gap to save space */
-    }
+}
+
+/* Hover ve Focus Durumları */
+.navLink:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.themeToggle:focus,
+.hamburger:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }

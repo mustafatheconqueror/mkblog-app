@@ -3,16 +3,72 @@
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
-h1 {
+.mainTitle {
     color: var(--color-primary);
+    font-size: 2.5rem; /* Büyük başlık */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.subTitle {
+    font-size: 1.5rem; /* Daha büyük alt başlık */
+    color: var(--color-text);
     margin-bottom: 10px;
 }
 
-p {
+.description {
     font-size: 1.1rem;
     color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.subscriptionForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.emailInput {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.emailInput:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 8px rgba(3, 218, 198, 0.5);
+}
+
+.subscribeButton {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribeButton:hover {
+    background-color: #4a00e0; /* Daha koyu bir renk */
+    transform: scale(1.05);
+}
+
+.message {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    margin-top: 10px;
 }
