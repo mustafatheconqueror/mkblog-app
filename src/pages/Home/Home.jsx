@@ -19,6 +19,31 @@ const Home = () => {
         }
     };
 
+    // Sample blog data
+    const blogPosts = [
+        {
+            id: 1,
+            title: 'Understanding React Context',
+            excerpt:
+                'React Context provides a way to pass data through the component tree without having to pass props down manually at every level.',
+            date: 'October 10, 2023',
+        },
+        {
+            id: 2,
+            title: 'A Guide to CSS Flexbox',
+            excerpt:
+                'Flexbox is a one-dimensional layout method for arranging items in rows or columns. It makes it easier to design flexible responsive layout structures.',
+            date: 'November 5, 2023',
+        },
+        {
+            id: 3,
+            title: 'Mastering JavaScript Closures',
+            excerpt:
+                'Closures are a fundamental concept in JavaScript that allow functions to access variables from an enclosing scope or environment even after it leaves the scope in which it was declared.',
+            date: 'December 15, 2023',
+        },
+    ];
+
     return (
         <div className={styles.container}>
             <h1 className={styles.mainTitle}>Improve Your Engineering and Architecture Skills</h1>
@@ -77,6 +102,21 @@ const Home = () => {
                             Dive deeper into domain-driven design, modular monoliths, microservices, and advanced architecture patterns in .NET to build robust, scalable applications.
                         </p>
                     </div>
+                </div>
+            </section>
+
+            {/* Yeni Bölüm: Recent Posts */}
+            <section className={styles.recentPostsSection}>
+                <h2 className={styles.recentPostsTitle}>Recent Posts</h2>
+                <p className={styles.recentPostsSubtitle}>Explore the recent blog posts</p>
+                <div className={styles.recentPostsGrid}>
+                    {blogPosts.map((post) => (
+                        <div key={post.id} className={styles.postCard}>
+                            <h3 className={styles.postTitle}>{post.title}</h3>
+                            <p className={styles.postExcerpt}>{post.excerpt}</p>
+                            <p className={styles.postDate}>{post.date}</p>
+                        </div>
+                    ))}
                 </div>
             </section>
         </div>
