@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
@@ -6,7 +5,8 @@ import Home from './pages/Home/Home';
 import Blogs from './pages/Blogs/Blogs';
 import './index.css';
 import Sponsorship from "./pages/Sponsorship/Sponsorship.jsx";
-import About from "./pages/About/About.jsx"; // Ensure global styles are applied
+import About from "./pages/About/About.jsx";
+import Footer from "./components/Footer/Footer.jsx"; // Ensure global styles are applied
 
 const App = () => {
     return (
@@ -20,6 +20,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                 </Routes>
             </main>
+            <Footer /> {/* Add Footer here */}
         </Router>
     );
 };
