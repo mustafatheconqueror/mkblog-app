@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
 import classNames from 'classnames';
-import logo from '../../assets/react.svg'; // Adjust the path if necessary
+import logo from '../../assets/react.svg'; // Ensure the path is correct
 
 const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,6 +41,28 @@ const Header = () => {
                             onClick={closeMobileMenu}
                         >
                             Blogs
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/sponsorship"
+                            className={({ isActive }) =>
+                                isActive ? styles.activeLink : undefined
+                            }
+                            onClick={closeMobileMenu}
+                        >
+                            Sponsorship
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                isActive ? styles.activeLink : undefined
+                            }
+                            onClick={closeMobileMenu}
+                        >
+                            About
                         </NavLink>
                     </li>
                 </ul>

@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Home from './pages/Home/Home';
 import Blogs from './pages/Blogs/Blogs';
-import './index.css'; // Ensure global styles are applied
+import './index.css';
+import Sponsorship from "./pages/Sponsorship/Sponsorship.jsx";
+import About from "./pages/About/About.jsx"; // Ensure global styles are applied
 
 const App = () => {
     return (
@@ -14,6 +16,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<Blogs />} />
+                    <Route path="/sponsorship" element={<Sponsorship />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
             </main>
         </Router>
