@@ -1,7 +1,7 @@
 /* src/pages/Home.module.css */
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
     text-align: center;
@@ -191,6 +191,48 @@
     color: var(--color-secondary);
 }
 
+/* Yeni Bölüm: Let's Connect */
+.connectSection {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.connectTitle {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.connectSubtitle {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    margin-bottom: 30px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.socialLink {
+    color: var(--color-primary);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLink:hover {
+    color: var(--color-secondary);
+    transform: scale(1.2);
+}
+
+.socialIcon {
+    font-size: 2.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .featuresGrid {
@@ -208,22 +250,31 @@
     .recentPostsGrid {
         grid-template-columns: 1fr;
     }
+    .connectSection {
+        padding: 30px 15px;
+    }
 
-    .featuresTitle {
+    .featuresTitle,
+    .recentPostsTitle,
+    .connectTitle {
         font-size: 1.8rem;
     }
 
-    .featuresSubtitle {
+    .featuresSubtitle,
+    .recentPostsSubtitle,
+    .connectSubtitle {
         font-size: 1rem;
     }
+}
+/* Yeni Bölüm: World Model */
+.worldModelSection {
+    margin-top: 60px;
+}
 
-    .recentPostsTitle {
-        font-size: 1.8rem;
-    }
-
-    .recentPostsSubtitle {
-        font-size: 1rem;
-    }
+.worldModelTitle {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
 /* Hover ve Focus Durumları */
@@ -236,4 +287,11 @@
 .hamburger:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
+}
+
+/* Eğer ikon eklemek isterseniz, aşağıdaki sınıfı ekleyebilirsiniz */
+.postIcon {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
 }

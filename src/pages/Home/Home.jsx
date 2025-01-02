@@ -1,7 +1,8 @@
 // src/pages/Home.jsx
 import React, { useState } from 'react';
 import styles from './Home.module.css';
-import { FaLightbulb, FaSyncAlt, FaCode, FaCogs } from 'react-icons/fa';
+import {FaLightbulb, FaSyncAlt, FaCode, FaCogs, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import WorldModel from "../../components/WorldModel.jsx";
 
 const Home = () => {
     const [email, setEmail] = useState('');
@@ -69,6 +70,12 @@ const Home = () => {
             </form>
             {message && <p className={styles.message}>{message}</p>}
 
+            {/* Yeni Bölüm: World Model */}
+            <section className={styles.worldModelSection}>
+                <h2 className={styles.worldModelTitle}>Our Global Network</h2>
+                <WorldModel />
+            </section>
+
             {/* Yeni Bölüm: Features */}
             <section className={styles.featuresSection}>
                 <h2 className={styles.featuresTitle}>Grow faster as a developer</h2>
@@ -117,6 +124,35 @@ const Home = () => {
                             <p className={styles.postDate}>{post.date}</p>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* Yeni Bölüm: Let's Connect */}
+            <section className={styles.connectSection}>
+                <h2 className={styles.connectTitle}>Let's Connect</h2>
+                <p className={styles.connectSubtitle}>
+                    I share .NET and Architecture knowledge on social media. Follow me and let's connect.
+                </p>
+                <div className={styles.socialIcons}>
+                    <a
+                        href="https://www.linkedin.com/in/anton-profile" // Kendi LinkedIn profil URL'niz ile değiştirin
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                        className={styles.socialLink}
+                    >
+                        <FaLinkedin className={styles.socialIcon} />
+                    </a>
+                    <a
+                        href="https://twitter.com/anton_profile" // Kendi Twitter profil URL'niz ile değiştirin
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                        className={styles.socialLink}
+                    >
+                        <FaTwitter className={styles.socialIcon} />
+                    </a>
+                    {/* İstediğiniz diğer sosyal medya platformlarını ekleyebilirsiniz */}
                 </div>
             </section>
         </div>

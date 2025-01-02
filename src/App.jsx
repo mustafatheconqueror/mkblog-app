@@ -12,7 +12,7 @@ const App = () => {
     return (
         <Router>
             <Header />
-            <main style={{ padding: '20px' }}>
+            <main style={{ padding: '40px' }}>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<Blogs />} />
@@ -20,7 +20,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                 </Routes>
             </main>
-            <Footer /> {/* Add Footer here */}
+            <Footer />
         </Router>
     );
 };

@@ -1,20 +1,34 @@
 /* src/pages/About.module.css */
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
-}
-
-h1 {
-    color: var(--color-primary);
-    margin-bottom: 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.title {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
     color: var(--color-text);
-    margin-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.canvasContainer {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 40px;
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.moreInfo {
+    font-size: 1rem;
+    color: var(--color-text);
 }
